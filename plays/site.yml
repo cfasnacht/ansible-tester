@@ -1,0 +1,9 @@
+---
+
+- name: test play
+  hosts: all
+  tasks:
+    - name: test dir
+      file:
+        dest: /root/test
+        state: directory

@@ -1,0 +1,1 @@
+test-ansible-container-ubuntu ansible_connection=docker
