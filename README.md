@@ -4,4 +4,4 @@ This ansible test script just runs the play/site.yml in a docker container, by d
 this is very handy to test a playbook
 
 ### run it:
-`./ansible-test.sh'
+`./ansible-test.py -h"
