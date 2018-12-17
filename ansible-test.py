@@ -39,11 +39,9 @@ if not args.cleanup:
     if args.verbose:
         verbose = "-" + "v" * args.verbose
         ansible_cmd.append(verbose)
-        print("verbose " + verbose)
-    print("cmd" + str(ansible_cmd))
     subprocess.call(ansible_cmd)
-
-    subprocess.call(["docker", "exec", "-ti", container_name, "/bin/bash"])
+    if args.enter:
+        subprocess.call(["docker", "exec", "-ti", container_name, "/bin/bash"])
 
 if not args.enter:
     subprocess.call(["docker", "stop", container_name])
