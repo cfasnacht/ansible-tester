@@ -3,7 +3,7 @@
 - name: test play
   hosts: all
   tasks:
-    - name: test dir
-      file:
-        dest: /root/test
-        state: directory
+    - name: test file
+      copy:
+        dest: /tmp/testfile
+        content: testcontent
